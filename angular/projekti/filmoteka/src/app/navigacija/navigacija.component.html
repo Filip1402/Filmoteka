@@ -1,0 +1,16 @@
+<nav>
+	<ul id="nav">
+		<li><a a routerLink="/pocetna" routerLinkActive="active">Pocetna</a></li>
+		<li><a a routerLink="/dokumentacija" routerLinkActive="active">Dokumentacija</a></li>
+		<li *ngIf="!isUser"><a a routerLink="/registracija" routerLinkActive="active">Registacija</a></li>
+		<li *ngIf="!isUser"><a routerLink="/prijava" routerLinkActive="active">Prijava</a></li>
+		<li *ngIf="isUser"><a routerLink="/filmoviPretrazivanje" routerLinkActive="active">Filmovi pretrazivanje</a></li>
+		<li *ngIf="isUser"><a routerLink="/filmoviPregled" routerLinkActive="active">Filmovi pregled</a></li>
+		<li *ngIf="isAdmin"><a routerLink="/filmoviPrijedlozi" routerLinkActive="active">Filmovi prijedlozi</a></li>
+		<li *ngIf="isAdmin"><a routerLink="/zanrovi" routerLinkActive="active">Zanrovi</a></li>
+		<li *ngIf="isUser"><a routerLink="/profil" routerLinkActive="active">Profil</a></li>
+		<li *ngIf="isUser"><a href="/odjava" routerLinkActive="active">Odjava</a></li>
+	</ul>
+</nav>
+<br>
+

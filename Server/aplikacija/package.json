@@ -1,0 +1,12 @@
+{
+  "name": "aplikacija",
+  "version": "1.0.0",
+  "description": "zadaca 2",
+  "main": "appServer.js",
+  "scripts": {
+    "start": "node --experimental-fetch  appServer.js ../rwa_fmilohano20_conf.csv",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Filip Milohanović",
+  "license": "ISC"
+}

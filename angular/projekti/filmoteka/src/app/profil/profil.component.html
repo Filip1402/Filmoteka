@@ -1,0 +1,36 @@
+<div id="poruka"></div><br>
+<main id="sadrzaj">
+    <form id="obrazac">
+        <fieldset><legend>Profil</legend>
+        <p><label for="txtIme">Ime:</label>
+            <input type="text" name="txtIme" [(ngModel)]="txtIme" id="txtIme" >
+        </p>
+
+        <p> <label for="txtPrezime">Prezime:</label>
+            <input type="text" name="txtPrezime" [(ngModel)]="txtPrezime" id="txtPrezime" >
+        </p>
+        <p><label for="txtAdresa">Adresa:</label>
+            <input type="text" name="txtAdresa" [(ngModel)]="txtAdresa" id="txtAdresa" >
+        </p>
+
+        <p><label for="datumRodjenja">Datum rođenja:</label>
+            <input type="date" name="datumRodjenja" [(ngModel)]="datumRodjenja" id="datumRodjenja">
+        </p>
+
+        <p> <label for="txtKorime">Korisnicko ime:</label>
+            <input type="text" name="txtKorime" [(ngModel)]="txtKorime" id="txtKorime"  disabled>
+        </p>
+
+        <p><label for="txtEmail">Email:</label>
+            <input type="text" name="txtEmail" [(ngModel)]="txtEmail" id="txtEmail"  disabled>
+        </p>
+
+        <p> <label for="pswLozinka">Nova lozinka:</label>
+            <input type="password" name="pswLozinka" [(ngModel)]="pswLozinka" id="pswLozinka">
+        </p>
+
+        <input type="submit" value="Ažuriraj profil" id="btnAzuriraj" (click)="UpdateProfil()">
+    </fieldset>
+    </form>
+</main>
+<br>

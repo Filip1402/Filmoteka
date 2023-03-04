@@ -1,0 +1,20 @@
+<main>
+    <div *ngIf="filmDetalji">
+        <img *ngIf="filmDetalji.film.backdrop_path" src="/posteri/{{filmDetalji.film.title}}.{{filmDetalji.film.backdrop_path.split('.')[1]}}" width="300" alt="slika_{{ filmDetalji.film.title }}">
+        <p>Naziv: {{ filmDetalji.film.title }}</p>
+        <p>Originalni naziv: {{ filmDetalji.film.original_title }}</p>
+        <p>Originalni jezik: {{ filmDetalji.film.original_language }}</p>
+        <p>Opis: {{ filmDetalji.film.overview }}</p>
+        <p>Datum izlaska: {{ filmDetalji.film.release_date}}</p>
+        <p>Status : {{ filmDetalji.film.status }}</p>
+        <p><a class="film" target="_blank" href="https://www.imdb.com/title/{{ filmDetalji.film.imdb_id }}">IMDB</a></p>
+        <p>Zanrovi:</p>
+            <ul *ngFor="let zanr of filmDetalji.zanrovi">
+                <li>{{zanr.naziv}}</li>
+            </ul>
+        
+        <p>Unio korisnik: {{ filmDetalji.korisnik.ime }} {{ filmDetalji.korisnik.prezime }}</p>
+    </div>
+
+
+</main>

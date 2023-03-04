@@ -1,0 +1,22 @@
+
+<main>
+    <form>
+      <fieldset>
+        <legend>Prijava</legend>
+      <p><label for="korime">Korisnicko ime:</label>
+        <input type="text" [(ngModel)]="korime" name="korime" id="korime">
+      </p>
+    
+    
+      <p><label for="lozinka">Lozinka:</label>
+        <input type="password" [(ngModel)]="lozinka" name="lozinka" id="lozinka">
+      </p>
+
+      <input class ="button" type="submit" value="Prijavi se" (click) = "PrijaviMe()">
+    </fieldset>
+    </form>
+    <br>
+    
+    <p>korime:administrator , lozinka:rwa</p>
+    <p>korime:obican , lozinka:rwa</p>
+    </main>

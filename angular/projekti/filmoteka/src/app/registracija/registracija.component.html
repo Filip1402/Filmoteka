@@ -1,0 +1,46 @@
+<main>
+    <div id="poruke"></div>
+
+    <form>
+        <fieldset>
+            <legend>O korisniku</legend>
+
+            <p><label for="ime" >Ime:</label>
+                <input type="text" [(ngModel)]="ime" id="ime" name="ime">
+            </p>
+
+            <p><label for="prezime">Prezime:</label>
+                <input type="text" [(ngModel)]="prezime" id="prezime" name="prezime">
+            </p>
+
+            <p><label for="adresa">Adresa:</label>
+                <input type="text" [(ngModel)]="adresa" id="adresa" name="adresa">
+            </p>
+
+            <p><label for="datum_rodjenja">Datum rođenja:</label>
+                <input type="date" [(ngModel)]="datum_rodjenja" id="datum_rodjenja" name="datum_rodjenja">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Podaci za prijavu</legend>
+
+            <p><label for="email">Email:</label>
+                <input type="text" [(ngModel)]="email" id="email" name="email">
+            </p>
+
+            <p><label for="korime">Korisnicko ime:</label>
+                <input type="text" [(ngModel)]="korime" id="korime" name="korime">
+            </p>
+
+            <p><label for="lozinka">Lozinka:</label>
+                <input type="password" [(ngModel)]="lozinka" id="lozinka" name="lozinka">
+            </p>
+
+
+        </fieldset>
+
+        <input class="button" type="submit" id="btnRegistracija" value="Registriraj se" (click) = "PrijaviMe()">
+
+    </form>
+</main>

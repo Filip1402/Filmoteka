@@ -1,0 +1,33 @@
+<div id="poruka"></div><br>
+<main id="sadrzaj">  
+
+    <form ><fieldset id="zanrovi_baza">
+        <ol>
+            <li *ngFor="let zanr of zanrovi_iz_baze">
+                <input type="radio"  [value] = "zanr.id" [(ngModel)]="selectedOption">{{zanr.naziv}}
+            </li>
+        </ol>
+    </fieldset></form>
+    <p>
+        <label>Oznacite radio gump pored zanra kojeg zelite preimenovati i unesite novi naziv zanra :</label>
+        <input type="text" id="txtNazivZanra" [(ngModel)] = "noviNaziv"><br>
+        <input type="button" id="azururajZanr" value="Promjeni ime zanra" (click) = "azuriraj()">
+    </p>
+    <p>
+        <input type="button" id="dajZnarove" value="Ucitaj zanrove" (click)="dohvatiZanroveTMDB()">
+        <input type="button" id="obrisiSveBezFilma" value="Izbrisi sve zanrove bez filmova" (click) = "izbrisi()">
+    </p>
+    <div *ngIf="zanroviTMDB.length > 0" id="ispis">
+        <ol>
+            <li *ngFor="let zanr of zanroviTMDB">
+                <input type="checkbox" [id] = "zanr.id"  [value] = "zanr.name" (change)="onCheckboxChange($event)">{{zanr.name}}  
+            </li>
+        </ol>
+        <p>
+            <input type="button" id="dodajZanr" value="DodajZanr" (click)="dodaj()">
+        </p>
+        
+    </div>
+
+    <div id="poruke"></div>
+</main>

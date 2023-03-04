@@ -1,0 +1,49 @@
+<main>
+
+    <div id="stranicenje">
+        <!-- Check if str > 1 -->
+        <button *ngIf="str > 1" (click)="dohvatiFilmove(1)"><<</button>
+        <button *ngIf="str > 1" (click)="dohvatiFilmove(str - 1)"><</button>
+        <button (click)="dohvatiFilmove(str)">{{str}}/{{ukupno}}</button>
+        <!-- Check if str < ukupno -->
+        <button *ngIf="str < ukupno" (click)="dohvatiFilmove(str + 1)">></button>
+        <button *ngIf="str < ukupno" (click)="dohvatiFilmove(ukupno)">>></button>
+    </div>
+
+    <div>
+        <table border="1">
+            <tr>
+                <th>Jezik</th>
+                <th>Naslov original</th>
+                <th>Naslov</th>
+                <th>Opis</th>
+                <th>Poster</th>
+                <th>Zanr</th>
+                <th>Datum</th>
+            </tr>
+            <tr *ngFor="let f of filmovi">
+                <td>{{ f.original_language }}</td>
+                <td>{{ f.original_title }}</td>
+                <td>{{ f.title }}</td>
+                <td>{{ f.overview }}</td>
+                <td>
+                    <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ f.poster_path }}" width="100"
+                        alt="slika_{{ f.title }}">
+                </td>
+                <td>
+                    <span *ngFor="let zanr of zanrovi">
+                        <a *ngIf="zanr.id_tmdb == f.zanr">{{zanr.naziv}}</a>
+                    </span>
+                </td>
+                <td>{{ f.release_date }}</td>
+                <td>
+                    <button (click)="Odobri(f.id)">Odobri</button>
+                </td>
+                <td>
+                    <button (click)="Brisi(f.id)">Brisi</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</main>

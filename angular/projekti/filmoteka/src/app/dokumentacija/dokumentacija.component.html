@@ -1,0 +1,277 @@
+<main>
+    <h1>Dokumentacija</h1>
+    <ul>
+        <li><img alt="Slika autora" src="../slike/autor.jpg" width="200"></li>
+        <li>Filip Milohanović</li>
+        <li>fmilohano20@student.foi.hr</li>
+    </ul>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Resurs</th>
+                    <th>GET</th>
+                    <th>POST</th>
+                    <th>PUT</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>api/korisnici</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>api/korisnici/korime</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>api/korisnici/korime/aktivacija</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>api/korisnici/korime/prijava</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>api/filmovi/?stranica=broj&amp;brojFilmova=broj[&amp;datum=datum][&amp;zanr=idZanr][&amp;naziv=dioNazivFilma][&amp;sortiraj=[d
+                        | z | n]]</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>api/filmovi/id</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>api/zanr/</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>api/zanr/id</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>api/tmdb/zanr</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>api/tmdb/filmovi?kljucaRijec=rijec1[,rijec2]&amp;stranica=broj</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        Sve je implementirano!!!
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Uloga</th>
+                    <th>Stranica/e</th>
+                    <th>Odrađeno</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gost</td>
+                    <td>Početna</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Gost</td>
+                    <td>Dokumentacija</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Gost</td>
+                    <td>Registracija,Prijava, Odjava</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>Profil</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>Filmovi pregled</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>Film</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>Filmovi pretraživanje</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>Galerija slika</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>Slika</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Filmovi prijedlozi</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Žanrovi</td>
+                    <td>+</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        Sve je implementirano osim galerije slika i slika!!!
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Točka</th>
+                    <th>Opis</th>
+                    <th>Aplikacija</th>
+                    <th>Odrađeno</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Točka 7</td>
+                    <td>REST servis funkcionalno ostaje isti međutim potrebno je napraviti sljedeće izmjene: a. Da radi
+                        sa
+                        SQLite bazom podataka b. Da koristi port koji se čita iz konfiguracijske datoteke pod nazivom:
+                        rest.port<br></td>
+                    <td>REST</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Točka 8</td>
+                    <td>REST servis može dodatno ima parameter kod resursa api/filmovi koji omogućuje dohvat samo
+                        odobrenih
+                        ili ne odobrenih filmova. Nije obavezno.</td>
+                    <td>REST</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Točka 9</td>
+                    <td>REST servis ne korsiti više username i password već prima JWT i tako validira input. Varijanta
+                        sa
+                        username i password nosi manje bodova.</td>
+                    <td>REST</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Točka 11</td>
+                    <td>Klientski dio Web Aplikacije HTML, CSS i JS na strani klijenta prebaciti u Angular sa
+                        TypeScript-om.
+                    </td>
+                    <td>APP</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Točka 12</td>
+                    <td>Informacije o portovima na servise koje koristi Angular aplikacija čita iz environment datoteke.
+                        Hard kodirana varijanta nosi manje bodova.</td>
+                    <td>APP</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Točka 13</td>
+                    <td>Dizajn treba prebaciti korištenjem Sass preprocesora u Sass ili Scss sintaksi.</td>
+                    <td>APP</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Točka 14</td>
+                    <td>Dodati reCaptcha v3 sustav na minimalno 3 obrazaca</td>
+                    <td>APP</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Točka 15</td>
+                    <td>Pozadinski dio web aplikacije poslužuje Angular web aplikaciju.</td>
+                    <td>APP</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Točka 16</td>
+                    <td>Pozadinski dio web aplikacije poslužuje dokumentaciju - moguće je dokumentaciju ugraditi u samu
+                        angular aplikaciju.</td>
+                    <td>APP</td>
+                    <td>+(ugrađeno u angular)</td>
+                </tr>
+                <tr>
+                    <td>Točka 17</td>
+                    <td>Pozadinski dio web aplikaciije nudi REST api podršku za klijentsku stranu sa resursima koji ne
+                        postoje u REST servisu npr. autentifikacija korisnika i generiranje JWT-a</td>
+                    <td>APP</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Točka 18</td>
+                    <td>Pozadinski dio port se mora čitati iz konfiguracijske datoteke iz podatka: app.port</td>
+                    <td>APP</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Točka 19</td>
+                    <td>zbaciti TOTP i aktivaciju mailom kod prijave. Inicijalno mora postojati korisnik iz svake uloge
+                        koji
+                        nema TOTP i već je aktiviran i treba navesti podatke na stranici prijava radi lakšeg testiranja.
+                    </td>
+                    <td>APP</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Točka 20</td>
+                    <td>Angular aplikacija smije direktno komunicirati sa REST servisom, ali mora obavezno slati JWT.
+                        Varijanta bez JWT-a nosi manje bodova</td>
+                    <td>APP</td>
+                    <td>+</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        Sve je implementirano osim reCaptcha
+        <br>
+        *Napomena: Ako radite na linux-u trebate si dodati NODE_PATH u package.json kod starta
+    </div>
+</main>

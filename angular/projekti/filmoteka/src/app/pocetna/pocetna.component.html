@@ -1,0 +1,12 @@
+<main>
+<ul>
+    <li *ngFor="let zanr of zanrovi; let i = index">{{zanr.naziv}}
+        <ul *ngFor="let film of filmovi[i]">
+            <li>{{film.original_title}}</li>
+        </ul>
+    </li>
+
+  </ul>
+
+ 
+ <main>

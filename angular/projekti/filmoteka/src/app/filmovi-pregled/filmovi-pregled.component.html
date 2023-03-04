@@ -1,0 +1,69 @@
+<main id="sadrzaj">
+
+    <div id="poruka"></div><br>
+    <p>
+        <label for="FilterDatum">Filtriraj po datumu:</label>
+        <input type="date" [(ngModel)]="datum" name="datum" id="FilterDatum" (change)="dohvatiFilmove()">
+    </p>
+    <p><label for="filterZanr">Filtriraj po zanru:</label>
+        <input type="text" [(ngModel)]="filterZanr" name="filterZanr" id="filterZanr" (keyup) = "dohvatiFilmove()">
+    </p>
+
+    <p>
+        <label>Sortiraj po:</label>
+        <input type="radio" name="sort" value="" [(ngModel)]="sort"  (change)="onSortSelected($event)" checked>Id
+        <input type="radio" name="sort" value="z" [(ngModel)]="sort" (change)="onSortSelected($event)">Zanr
+        <input type="radio" name="sort" value="n"  [(ngModel)]="sort" (change)="onSortSelected($event)">Naziv
+        <input type="radio" name="sort" value="d" [(ngModel)]="sort" (change)="onSortSelected($event)">Datum
+    </p>
+
+
+    <div id="stranicenje">
+        <!-- Check if str > 1 -->
+        <button *ngIf="str > 1" (click)="dohvatiFilmove(1)"><<</button>
+        <button *ngIf="str > 1" (click)="dohvatiFilmove(str - 1)"><</button>
+        <button (click)="dohvatiFilmove(str)">{{str}}/{{ukupno}}</button>
+        <!-- Check if str < ukupno -->
+        <button *ngIf="str < ukupno" (click)="dohvatiFilmove(str + 1)">></button>
+        <button *ngIf="str < ukupno" (click)="dohvatiFilmove(ukupno)">>></button>
+      </div>
+    <div id="prikaz">
+
+        <table border="1">
+            <tr>
+              <th>Jezik</th>
+              <th>Naslov original</th>
+              <th>Naslov</th>
+              <th>Opis</th>
+              <th>Poster</th>
+              <th>Zanr</th>
+              <th>Datum</th>
+            </tr>
+            <!-- Loop through the array of films -->
+            <tr *ngFor="let f of filmovi">
+              <td>{{f.original_language}}</td>
+              <td>{{f.original_title}}</td>
+              <td>
+                <!-- Use a routerLink directive to navigate to the film detail page -->
+                <a routerLink="/film/{{f.id}}" class="film">{{f.title}}</a>
+              </td>
+              <td>{{f.overview}}</td>
+              <!-- Split the poster_path and get the file extension -->
+              <td>
+                <img *ngIf="f.poster_path" src='/posteri/{{f.title}}.{{f.poster_path.split(".")[1]}}' width='100' alt='slika_{{f.title}}'/>
+              </td>
+              <td >
+                <span *ngFor="let zanr of zanrovi">
+                    <a  *ngIf="zanr.id_tmdb == f.zanr">{{zanr.naziv}}</a>
+                </span>
+                
+              </td>
+              <td>{{f.release_date}}</td>
+            </tr>
+          </table>
+          
+
+
+    </div>
+    <br>
+</main>
